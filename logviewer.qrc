@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/logviewer.png</file>
+        <file>resources/please-wait-tr.gif</file>
+        <file>resources/color-wheel_256x256.png</file>
+        <file>resources/thread_256x256.png</file>
+        <file>resources/json_64x64.png</file>
+    </qresource>
+</RCC>
