@@ -1163,9 +1163,9 @@ void MainWindow::on_actionAbout_triggered()
     DECL_TRACER("MainWindow::on_actionAbout_triggered()");
 
     QString about("<b>%1 %2</b><br>"
-                  "Author: <i>Andreas Theofilu &lt;andreas.theofilu@raiffeisen-group-it.com&gt;</i><br>"
-                  "Copyright © 2025 by Raiffeisen Group IT GmbH.<br>"
-                  "Eigentum der Raiffeisen Bausparkasse GmbH. Alle Rechte vorbehalten!");
+                  "Author: <i>Andreas Theofilu &lt;andreas@theosys.at&gt;</i><br>"
+                  "Copyright © 2025 byAndreas Theofilu.<br>"
+                  "This program is licensed under the GPL 3!");
     about = about.arg(APPNAME).arg(VERSION_STRING());
     QMessageBox::about(this, APPNAME, about);
 }
