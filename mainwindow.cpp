@@ -254,7 +254,11 @@ bool MainWindow::parseFile(qsizetype totalLines, const QString& filter, const QS
                 filter.startsWith("JSon", Qt::CaseInsensitive) &&
                 isJson)
             {                                                                               // Yes, then parse it first to a string
+#if QT_VERSION < QT_VERSION_CHECK(6, 8, 0)
+                QJsonDocument jdoc = QJsonDocument::fromJson(QByteArray(line.c_str()));             // Create JSON object out of string
+#else
                 QJsonDocument jdoc = QJsonDocument::fromJson(QByteArray(line));             // Create JSON object out of string
+#endif
                 QJsonObject jline = jdoc.object();                                          // Get out the base object
                 QList<VALUES_t> values = TConfig::values();                                 // Get the wanted value names and types from config
                 QList<VALUES_t>::iterator iter;                                             // Declare an iterator
